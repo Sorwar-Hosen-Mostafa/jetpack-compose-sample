@@ -8,11 +8,14 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.jetpackcomposesample.ui.theme.JetpackComposeSampleTheme
 import com.example.jetpackcomposesample.ui.theme.Typography
+import org.intellij.lang.annotations.JdkConstants
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,7 +63,11 @@ fun DefaultPreview() {
 @Composable
 fun DefaultPreview() {
     JetpackComposeSampleTheme {
-        Column(modifier = Modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            horizontalAlignment = CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
 
             Row(
                 modifier = Modifier
@@ -98,29 +105,29 @@ fun DefaultPreview() {
 
             }
 
-        Surface(
-            modifier =
-            Modifier
-                .height(50.dp)
-                .width(200.dp),
-            color = MaterialTheme.colors.secondary
-        ) {}
+            Surface(
+                modifier =
+                Modifier
+                    .height(50.dp)
+                    .width(200.dp),
+                color = MaterialTheme.colors.secondary
+            ) {}
 
-        Surface(
-            modifier =
-            Modifier
-                .height(50.dp)
-                .width(200.dp),
-            color = MaterialTheme.colors.primaryVariant
-        ) {}
+            Surface(
+                modifier =
+                Modifier
+                    .height(50.dp)
+                    .width(200.dp),
+                color = MaterialTheme.colors.primaryVariant
+            ) {}
 
-        Surface(
-            modifier =
-            Modifier
-                .height(50.dp)
-                .width(200.dp),
-            color = MaterialTheme.colors.secondaryVariant
-        ) {}
+            Surface(
+                modifier =
+                Modifier
+                    .height(50.dp)
+                    .width(200.dp),
+                color = MaterialTheme.colors.secondaryVariant
+            ) {}
+        }
     }
-}
 }
