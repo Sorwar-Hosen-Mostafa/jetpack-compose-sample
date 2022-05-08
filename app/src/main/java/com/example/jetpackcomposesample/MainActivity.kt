@@ -60,15 +60,67 @@ fun DefaultPreview() {
 @Composable
 fun DefaultPreview() {
     JetpackComposeSampleTheme {
-        Column (modifier = Modifier.fillMaxSize()){
-            Surface(
-                modifier =
-                Modifier.height(50.dp)
-                    .width(200.dp),
-                color = MaterialTheme.colors.primary
+        Column(modifier = Modifier.fillMaxSize()) {
+
+            Row(
+                modifier = Modifier
+                    .width(200.dp)
+                    .height(50.dp)
             ) {
+                Surface(
+                    modifier =
+                    Modifier
+                        .fillMaxHeight()
+                        .weight(1f),
+                    color = MaterialTheme.colors.primary
+                ) {}
+                Surface(
+                    modifier =
+                    Modifier
+                        .fillMaxHeight()
+                        .weight(1f),
+                    color = MaterialTheme.colors.secondary
+                ) {}
+                Surface(
+                    modifier =
+                    Modifier
+                        .fillMaxHeight()
+                        .weight(1f),
+                    color = MaterialTheme.colors.primaryVariant
+                ) { }
+                Surface(
+                    modifier =
+                    Modifier
+                        .fillMaxHeight()
+                        .weight(1f),
+                    color = MaterialTheme.colors.secondaryVariant
+                ) { }
 
             }
-        }
+
+        Surface(
+            modifier =
+            Modifier
+                .height(50.dp)
+                .width(200.dp),
+            color = MaterialTheme.colors.secondary
+        ) {}
+
+        Surface(
+            modifier =
+            Modifier
+                .height(50.dp)
+                .width(200.dp),
+            color = MaterialTheme.colors.primaryVariant
+        ) {}
+
+        Surface(
+            modifier =
+            Modifier
+                .height(50.dp)
+                .width(200.dp),
+            color = MaterialTheme.colors.secondaryVariant
+        ) {}
     }
+}
 }
